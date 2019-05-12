@@ -12,9 +12,11 @@
 
 <body>
   <header class="wrapper header">
-    <a href="/" class="header__logoLink">ТоШоНадо</a>
+    <a href="/" class="header__logoLink">
+      <img class="header__logoImage" src="assets/images/toshonado-logo.png" alt="">
+    </a>
     <div class="header__main">
-      <a class="header__mainLink--phone" href="tel:+38 (067) 467-70-07">+38 (067) 467-70-07</a>
+      <!-- <a class="header__mainLink--phone" href="tel:+38 (067) 467-70-07">+38 (067) 467-70-07</a> -->
       <select class="custom-select">
         <option value="RU" selected>RU</option>
         <option value="UA">UA</option>
@@ -22,7 +24,7 @@
       <div id="menu">
         <a href="#" class="toggle"></a>
         
-        <aside class="visible">
+        <aside class="">
           <nav id="nav-compact">
             <a class="linkTo--primary" href="#">О нас</a>
             <a class="linkTo--primary" href="#">Наши друзья</a>
@@ -33,9 +35,6 @@
             <a class="linkTo--secondary" href="">Участие в инициативе USAID «Regional monitoring and analysis for 100% of Life»</a>
             <a class="linkTo--primary" href="#">Контакты</a>
           </nav>
-          <em>
-            Overflow menu items will appear above.
-          </em>
         </aside>
       </div>
     </div>
@@ -176,7 +175,7 @@
           <h5 class="contact__header">Оставьте заявку и мы Вам перезвоним!</h5>
           <form action="">
               <div class="material-input">
-                <input autofocus="true" id="name" minlength="2" placeholder="" required="true" type="text" /><label for="name">Ваше имя*</label><span class="error">Введите как минимум 2 буквы</span>
+                <input id="name" minlength="2" placeholder="" required="true" type="text" /><label for="name">Ваше имя*</label><span class="error">Введите как минимум 2 буквы</span>
               </div>
               <div class="material-input">
                 <input id="phone" placeholder=" " required="true" type="phone" /><label for="phone">Ваш телефон*</label><span class="error">Что-то не так!</span>

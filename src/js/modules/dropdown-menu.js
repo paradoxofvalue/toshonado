@@ -4,6 +4,7 @@ const DropdownMenu = {
       aside = document.querySelector('aside');
 
     toggle.addEventListener('click', function () {
+      toggle.classList.toggle('opened');
       aside.classList.toggle('visible')
     })
 

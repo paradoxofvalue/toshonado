@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Proxima Nova Cn Rg';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.wrapper {
+  max-width: 1730px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 95px; 
+  padding-right: 95px;
+}
+$green: #86b13b;
