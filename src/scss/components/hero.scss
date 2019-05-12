@@ -1,4 +1,9 @@
 .hero {
+  position: relative;
+  min-height: calc(100vh - 130px);
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
   &__header {
     font-size: 10em;
     font-family: 'Proxima Nova Lt';
@@ -66,7 +71,7 @@
     }
   }
   &__secondaryHeader {
-    font-family: 'Proxima Nova Cn Th';
+    font-family: 'Proxima Nova Th';
     font-weight: 800;
     font-style: normal;
     font-size: 2.16em;
@@ -76,7 +81,7 @@
     height: 430px;
     position: absolute;
     bottom: -20px;
-    right: -20px;
+    right: -100px;
     width: 220px;
     overflow: visible;
     background-image: url('/assets/images/hand-with-torch.png');
