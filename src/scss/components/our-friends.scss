@@ -1,0 +1,129 @@
+.ourFriends {
+  position: relative;
+  min-height: calc(100vh - 130px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__wrapper {
+    display: flex;
+    padding-top: 60px;
+  }
+
+  &__torchOurFriends {
+    width: 40%;
+    position: relative;
+    background-image: url('/assets/images/torch-our-friends.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+  }
+
+  &__content {
+    width: 60%;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 35px;
+    position: relative;
+    transition: 0.3s ease;
+
+    &:before,
+    &:after {
+      content: '';
+      background-color: transparent;
+      border-radius: 50%;
+      position: absolute;
+      z-index: -1;
+      transition: 0.3s ease 0.1s;
+    }
+
+    &:before {
+      height: 0px;
+      width: 0px;
+      top: 0;
+      right: 5px;
+    }
+
+    &:after {
+      height: 0px;
+      width: 0px;
+      bottom: 0px;
+      left: 0;
+    }
+
+    &:hover {
+
+      &:before,
+      &:after {
+        background-color: $green;
+      }
+
+      &:before {
+        height: 30px;
+        width: 30px;
+      }
+
+      &:after {
+        height: 80px;
+        width: 80px;
+      }
+
+      .ourFriend__logo {
+        filter: grayscale(0%);
+        transform: scale(1.2);
+      }
+    }
+
+    .ourFriend__logo {
+      height: 110px;
+      object-fit: contain;
+      transition: 0.3 ease;
+      filter: grayscale(100%);
+      transform: scale(1);
+      transition: 0.3s ease;
+    }
+
+    .ourFriend__description {
+      &:before {
+        content: '';
+        width: 70px;
+        height: 4px;
+        background-color: $green;
+        position: relative;
+        display: block;
+        margin: 20px auto;
+      }
+    }
+  }
+  .owl-nav {
+    top: calc(50% - 25px);
+    position: absolute;
+    display: flex;
+    width: 100%;
+    width: 110%;
+    left: -5%;
+    justify-content: space-between;
+    button.owl-prev, button.owl-next {
+      height: 50px;
+      width: 50px;
+      background-color: $green;
+      border-radius: 50%;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      outline: none;
+      span {
+        line-height: 0.5;
+        font-size: 2em;
+        position: relative;
+        top: -2px;
+      }
+    }
+  }
+}

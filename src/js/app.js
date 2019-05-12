@@ -6,6 +6,7 @@
 import Lang from './modules/lang';
 import DropdownMenu from './modules/dropdown-menu'
 import Mask from './modules/jquery-mask-plugin'
+import Carousels from './modules/carousels';
 
 (($) => {
   // When DOM is ready
@@ -13,5 +14,6 @@ import Mask from './modules/jquery-mask-plugin'
     Lang.init();
     DropdownMenu.init();
     Mask.init();
+    Carousels.init();
   });
 })(jQuery);

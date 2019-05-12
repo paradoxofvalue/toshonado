@@ -23,13 +23,17 @@
   &__main {
     display: flex;
     align-items: center;
-    .custom-select {
+    .lang-select {
       border: none;
       width: 75px;
       background: none;
       font-size: 1em;
       font-weight: 600;
       margin-right: 40px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      text-indent: 1px;
+      text-overflow: '';
 
       background: url("/assets/images/icons/icon-arrow.png") no-repeat right .75rem center/10px 5px;
     
