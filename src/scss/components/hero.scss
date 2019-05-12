@@ -1,0 +1,126 @@
+.hero {
+  &__header {
+    font-size: 10em;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1;
+    position: relative;
+    &:before {
+      height: 1em;
+      position: relative;
+      bottom: 0;
+      content: "";
+      width: 1em;
+      display: inline-block;
+      background-image: url('/assets/images/toShоNado-text.png');
+      background-repeat: no-repeat;
+      background-position-y: 100%;
+    }
+    &:after {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      background-color: $green;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+      content: '';
+      position: relative;
+      display: inline-block;
+      animation-name: agencyDot;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease;
+      animation-fill-mode: both;
+      animation-direction: alternate;
+    }
+    &Description {
+      font-size: 1.33em;
+      width: 400px;
+      font-family: 'Proxima Nova Lt';
+      font-weight: 600;
+      font-style: normal;
+      position: relative;
+      top: -20px;
+      line-height: 1.2;
+    }
+  }
+  &__secondaryHeaderWrapper {
+    width: 70%;
+    margin: 170px auto;
+    position: relative;
+    &:before {
+      content: '';
+      height: 90px;
+      width: 25px;
+      position: absolute;
+      display: inline-block;
+      background-image: url('/assets/images/icons/icon-mouse.png');
+      left: -110px;
+      bottom: -40px;
+      animation-name: translateTopBottom;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease;
+      animation-fill-mode: both;
+      animation-direction: alternate;
+    }
+  }
+  &__secondaryHeader {
+    font-family: 'Proxima Nova Cn Th';
+    font-weight: 800;
+    font-style: normal;
+    font-size: 2.16em;
+    line-height: 1;
+  }
+  &__handWithTorchWrapper {
+    height: 430px;
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 220px;
+    overflow: visible;
+    background-image: url('/assets/images/hand-with-torch.png');
+    &:before {
+      content: '';
+      height: 150px;
+      width: 150px;
+      background: radial-gradient($green, transparent 70%);
+      border-radius: 50%;
+      position: absolute;
+      top: 10px;
+      left: 25px;
+      z-index: -1;
+      animation-name: handWithTorchAnimation;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease;
+      animation-fill-mode: both;
+      animation-direction: alternate;
+    }
+  }
+}
+
+@keyframes agencyDot {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+@keyframes handWithTorchAnimation {
+  from {
+    transform: scale(.5);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+@keyframes translateTopBottom {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
