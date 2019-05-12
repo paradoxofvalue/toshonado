@@ -4,10 +4,14 @@
 // Feel free with using ES6 here.
 
 import Lang from './modules/lang';
+import DropdownMenu from './modules/dropdown-menu'
+import Mask from './modules/jquery-mask-plugin'
 
 (($) => {
   // When DOM is ready
   $(() => {
     Lang.init();
+    DropdownMenu.init();
+    Mask.init();
   });
 })(jQuery);

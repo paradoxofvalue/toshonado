@@ -5,21 +5,212 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Starter Kit</title>
+  <title>ToShoNado Agency - Маркетинговое агенство полного цикла</title>
   <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
   <link media="all" rel="stylesheet" href="assets/css/style.min.css">
 </head>
 
 <body>
-  <div id="wrapper">
-    <div class="entry-section">
-      <div id="home-canvas"></div>
+  <header class="wrapper header">
+    <a href="/" class="header__logoLink">ТоШоНадо</a>
+    <div class="header__main">
+      <a class="header__mainLink--phone" href="tel:+38 (067) 467-70-07">+38 (067) 467-70-07</a>
+      <select class="custom-select">
+        <option value="RU" selected>RU</option>
+        <option value="UA">UA</option>
+      </select>
+      <div id="menu">
+        <a href="#" class="toggle"></a>
+        
+        <aside class="visible">
+          <nav id="nav-compact">
+            <a class="linkTo--primary" href="#">О нас</a>
+            <a class="linkTo--primary" href="#">Наши друзья</a>
+            <a class="linkTo--primary" href="#">Наши партнеры</a>
+            <a class="linkTo--secondary" href="#">Портфолио</a>
+            <a class="linkTo--primary" href="#">Социальная ответственность</a>
+            <a class="linkTo--secondary" href="">Наша гордость — всеукраинский проект «Экоофис»</a>
+            <a class="linkTo--secondary" href="">Участие в инициативе USAID «Regional monitoring and analysis for 100% of Life»</a>
+            <a class="linkTo--primary" href="#">Контакты</a>
+          </nav>
+          <em>
+            Overflow menu items will appear above.
+          </em>
+        </aside>
+      </div>
     </div>
-    <section class="starter-box">
-      <h1>JustCoded</h1>
-      <p>Web Starter Kit</p>
+  </header>
+  <main class="wrapper">
+    <section class="hero">
+      <h2 class="hero__header">Agency</h2>
+      <p class="hero__headerDescription">Маркетинговое агенство полного цикла</p>
+      <div class="hero__secondaryHeaderWrapper">
+        <h4 class="hero__secondaryHeader">Нужна реклама или медиаподдержка?</h4>
+        <h4 class="hero__secondaryHeader">У нас есть для вас ToShoNado!</h4>
+        <div class="hero__handWithTorchWrapper"></div>
+      </div>
     </section>
-  </div>
+    <section class="aboutUs">
+      <h3 class="header--primary">О нас</h3>
+      <div class="aboutUs__content">
+        <h5 class="header--secondary">Вам нужен резонанс, информационное сопровождение или реклама? Мы это обеспечим!</h5>
+        <p class="paragraph">
+          ToShoNado — это молодой бренд, но с давней историей успеха.
+          С 2002 года занимаемся информационным сопровождением
+          бизнеса, политических и государственных организаций в качестве
+          PR-подразделения одного из крупнейших в Украине медиа-холдингов.
+        </p>
+        <p class="paragraph">
+          С 2018 года обрели «независимость», открыли в Киеве и Харькове
+          офисы под брендом «ToShoNado».  Мы — ЕДИНСТВЕННОЕ
+          в Украине маркетинговое агентство, которое имеет собственный
+          медиаресурс в 15 млн читателей/подпичиков в месяц. За нашими
+          плечами десятки успешных кейсов, опытные специалисты,
+          крупные клиенты и масштабные медиапроекты.
+        </p>
+      </div>
+      <div class="aboutUs__treeAboutUs"></div>
+      
+    </section>
+    <section class="ourFriends">
+      <div class="ourFriends__torchOurFriends"></div>
+      <div class="ourFriends__content">
+        <div class="owl-carousel owl-theme">
+          <div class="ourFriends__item">
+            <img class="ourFriend__logo" src="./assets/images/logos/comments-ua-logo.png" alt="comments.ua">
+            <p class="ourFriend__description">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+          </div>
+          <div class="ourFriends__item">
+            <img class="ourFriend__logo" src="./assets/images/logos/mother-and-child-logo.png" alt="Мама и ребенок">
+            <p class="ourFriend__description">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+          </div>
+          <div class="ourFriends__item">
+            <img class="ourFriend__logo" src="./assets/images/logos/marker-ua-logo.png" alt="marker.ua">
+            <p class="ourFriend__description">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+          </div>
+          <div class="ourFriends__item">
+            <img class="ourFriend__logo" src="./assets/images/logos/trembita-info-logo.png" alt="trembita.info">
+            <p class="ourFriend__description">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="ourPartners">
+      <h3 class="header--primary">Наши партнеры</h3>
+      <h5 class="header--secondary">Портфолио</h5>
+      <div class="owl-carousel owl-theme">
+        <div class="ourPartner__item">
+          <img class="ourPartner__logo" src="./assets/images/logos/honda-logo.png" alt="">
+          <a class="ourPartner__link" href="#">смотреть кейс</a>
+        </div>
+        <div class="ourPartner__item">
+          <img class="ourPartner__logo" src="./assets/images/logos/iqos-logo.png" alt="">
+          <a class="ourPartner__link" href="#">смотреть кейс</a>
+        </div>
+        <div class="ourPartner__item">
+          <img class="ourPartner__logo" src="./assets/images/logos/honda-logo.png" alt="">
+          <a class="ourPartner__link" href="#">смотреть кейс</a>
+        </div>
+        <div class="ourPartner__item">
+          <img class="ourPartner__logo" src="./assets/images/logos/iqos-logo.png" alt="">
+          <a class="ourPartner__link" href="#">смотреть кейс</a>
+        </div>
+      </div>
+    </section>
+    <section class="socicalResponsibility">
+      <h3 class="header--primary">Социальная ответственность</h3>
+      <h5 class="header--secondary">Наша гордость — всеукраинский проект «Экоофис»</h5>
+      <div class="ourAchievements">
+        <div class="ourAchievement__item">
+          <img class="ourAchievement__image" src="./assets/images/soc-saved-trees.png" alt="800 сохраненных деревьев">
+          <p class="ourAchievement__description">800 сохраненных деревьев</p>
+        </div>
+        <div class="ourAchievement__item">
+          <img class="ourAchievement__image" src="./assets/images/soc-paper.png" alt="420 тонн собранной макулатуры">
+          <p class="ourAchievement__description">420 тонн собранной макулатуры</p>
+        </div>
+        <div class="ourAchievement__item">
+          <img class="ourAchievement__image" src="./assets/images/soc-planet.png" alt="Ежегодная посадка деревьев на День Земли">
+          <p class="ourAchievement__description">Ежегодная посадка деревьев на День Земли</p>
+        </div>
+        <div class="ourAchievement__item">
+          <img class="ourAchievement__image" src="./assets/images/soc-events.png" alt="2 офлайн и 2 онлайн мероприятия в год">
+          <p class="ourAchievement__description">2 офлайн и 2 онлайн мероприятия в год</p>
+        </div>
+        <div class="ourAchievement__item">
+          <img class="ourAchievement__image" src="./assets/images/soc-achievement.png" alt="Лучший социальный проект 2011 года по версии Green Awards Ukraine">
+          <p class="ourAchievement__description">Лучший социальный проект 2011 года по версии Green Awards Ukraine</p>
+        </div>
+      </div>
+      <h5 class="header--secondary">Участие в инициативе USAID «Regional monitoring and analysis for 100% of Life»</h5>
+      <div class="ourParticipation">
+        <div class="ourParticipation__usaid"></div>
+        <div class="ourParticipations">
+          <div class="ourParticipation__item">
+            Мониторинг закупок лекарственных средств через систему ProZorro 
+          </div>
+          <div class="ourParticipation__item">
+            Работа над проектом в кооперации  с «Сomments.ua»
+          </div>
+          <div class="ourParticipation__item">
+            Разоблачение коррупционных схем в больницах и госпиталях на миллионы гривен
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contacts">
+      <h3 class="header--primary">Контакты</h3>
+      <div class="contacts__peopleContact"></div>
+      <div class="contacts__content">
+        <div class="contacts__items">
+          <div class="contacts__emails">
+            <a class="contacts__email" href="mailto:pr.toshonado@gmail.com">pr.toshonado@gmail.com (Киев)</a>
+            <a class="contacts__email" href="mailto:toshonado.kha@gmail.com">toshonado.kha@gmail.com (Харьков)</a>
+          </div>
+          <div class="contacts__phones">
+            <a class="contacts__phone" href="tel:+38067467-70-07">+38 (067) 467-70-07 (Киев)</a>
+            <a class="contacts__phone" href="tel:+38098378-98-98">+38 (098) 378-98-98 (Харьков)</a>
+          </div>
+        </div>
+        <div class="contact__form">
+          <h5 class="contact__header">Оставьте заявку и мы Вам перезвоним!</h5>
+          <form action="">
+              <div class="material-input">
+                <input autofocus="true" id="name" minlength="2" placeholder="" required="true" type="text" /><label for="name">Ваше имя*</label><span class="error">Введите как минимум 2 буквы</span>
+              </div>
+              <div class="material-input">
+                <input id="phone" placeholder=" " required="true" type="phone" /><label for="phone">Ваш телефон*</label><span class="error">Что-то не так!</span>
+              </div>
+              <div class="material-textarea">
+                <textarea id="body" maxlength="500" minlength="10" onkeyup="document.getElementById(&#39;counter&#39;).innerHTML = this.value.length;" placeholder=" " required="true"></textarea><label for="body">Сообщение</label><span class="error">Не меньше 10 букв</span><span id="counter">0</span>
+              </div>
+              <button class="material-button" type="submit">Send info</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="wrapper footer">
+    <div class="footer__logo"></div>
+    <div class="socials">
+      <a class="social__item social__item--facebook" target="_blank" href="#"></a>
+      <a class="social__item social__item--instagram" target="_blank" href="#"></a>
+      <a class="social__item social__item--twitter" target="_blank" href="#"></a>
+    </div>
+    <div class="footer__contacts">
+      <div class="footer__contact">
+        <address class="footer__address">г. Харьков, пр. Гагарина, 50</address>
+        <a class="footer__phone" href="tel:+380983789898">+38 (098) 378-98-98</a>
+        <a class="footer__email" href="mailto:toshonado.kha@gmail.com">toshonado.kha@gmail.com</a>
+      </div>
+      <div class="footer__contact">
+        <address class="footer__address">г. Киев, 01033 ул. Василия Яна 3/5</address>
+        <a class="footer__phone" href="tel:+380674677007">+38 (067) 467-70-07</a>
+        <a class="footer__email" href="mailto:pr.toshonado@gmail.com">pr.toshonado@gmail.com</a>
+        <p class="footer__schedule">Пн-Пт с 10:00 до 18:00</p>
+      </div>
+    </div>
+  </footer>
   <script src="assets/js/vendor.min.js" defer></script>
   <script src="assets/js/app.js" defer></script>
 </body>

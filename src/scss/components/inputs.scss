@@ -1,0 +1,149 @@
+$font-size: 16px;
+$main-color: #824ba7;
+$textarea-height: 100px;
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+form:invalid .material-button {
+  color: rgba(0, 0, 0, 0.26);
+  pointer-events: none;
+}
+
+
+.material-button {
+  padding: 8px 10px;
+  min-width: 88px;
+  border-radius: 3px;
+  font-size: $font-size - 2px;
+  font-weight: 500;
+  color : $main-color;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color .2s, color .2s;
+  &:hover, &:focus {
+    background-color: rgba(158, 158, 158, 0.2);
+  }
+}
+.material-input { 
+  height: 70px; 
+  label {
+    line-height: $font-size + 46px;
+    height: $font-size + 30px;
+  }
+}
+.material-textarea { 
+  height: $textarea-height + 52px; 
+  label {
+    line-height: $font-size + 46px;
+    height: $textarea-height + 30px;
+  }
+  textarea:invalid ~ #counter { 
+    color: red; 
+    &:after { color: red; }
+  }
+  textarea:placeholder-shown:invalid ~ #counter {
+    color: black; 
+    &:after { color: black; }
+  }
+  textarea ~ #counter {
+    position: absolute;
+    bottom: 3px;
+    right: 0;
+    color: black;
+    font-size: $font-size - 4px;
+    &:after {
+      content: ' / 500';
+      color: black;
+    }
+  }
+}
+.material-input, .material-textarea {
+  position: relative;
+  width: 300px;
+  margin-bottom: 6px;
+  overflow: hidden;
+  font-family: arial, sans-serif;
+  label, input, textarea, .error {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    font-size: $font-size;
+  }
+  textarea {
+    height: $textarea-height;
+    resize: none;
+  }
+  input, textarea {
+    top: $font-size - 4px;
+    border: none;
+    margin: 8px 0;
+    background: none;
+    z-index: 2;
+    &:focus { outline: none; }
+    &:focus + label, &:valid + label, 
+    &:not(:placeholder-shown) + label {
+      line-height: $font-size + 2px;
+      font-size: $font-size - 4px;
+    }
+    &:placeholder-shown ~ .error, 
+    &:valid ~ .error { opacity: 0; }
+    &:focus + label {
+      color: $main-color;
+      &:after {
+        visibility: visible;
+        left: 0;
+        width: 100%;
+      }
+      & + .error { opacity: 0; }
+    }
+    &:not(:focus):not(:placeholder-shown):invalid {
+      transition-delay: 0s;
+      color: red;
+      & + label {
+        transition: all .2s 0s;
+        color: red;
+        &:after {
+          visibility: visible;
+          left: 0;
+          width: 100%;
+          background: red;
+          transition-delay: 0s;
+        }
+      }
+    }
+  }
+  label {
+    color: #666;
+    transition: .2s all cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: inset 0px -1px #aaa;
+    z-index: 1;
+    &:after {
+      content: '';
+      visibility: hidden;
+      position: absolute;
+      left: calc(50% - 5px);
+      bottom: 0;
+      background-color: $main-color;
+      width: 10px;
+      height: 2px;
+      transition-duration: 0.2s;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 10;
+    }
+  }
+  .error {
+    position: absolute;
+    bottom: 3px;
+    color: red;
+    font-size: $font-size - 4px;
+    font-style: italic;
+    opacity: 1;
+    transition: all .2s;
+  }
+}
