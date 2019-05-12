@@ -1,5 +1,5 @@
-$font-size: 16px;
-$main-color: #824ba7;
+$font-size: 24px;
+$main-color: $green;
 $textarea-height: 100px;
 
 input:-webkit-autofill {
@@ -11,34 +11,56 @@ form:invalid .material-button {
   pointer-events: none;
 }
 
+.material__form {
+  width: 100%;
+}
 
 .material-button {
-  padding: 8px 10px;
+  padding: 10px 50px;
   min-width: 88px;
-  border-radius: 3px;
-  font-size: $font-size - 2px;
-  font-weight: 500;
-  color : $main-color;
+  border-radius: 2em;
+  font-size: 1.33em;
   text-align: center;
-  text-transform: uppercase;
   border: none;
+  margin-top: 40px;
   outline: none;
   cursor: pointer;
+  margin-left: auto;
+  margin-right: 0;
   background-color: transparent;
   transition: background-color .2s, color .2s;
+  font-family: 'Proxima Nova Lt';
+  font-weight: 600;
+  font-style: normal;
+  color: black;
+  background-color: $green;
+  display: block;
+
   &:hover, &:focus {
-    background-color: rgba(158, 158, 158, 0.2);
+    background-color: $green;
   }
 }
 .material-input { 
-  height: 70px; 
+  height: 100px; 
+  width: calc(45% - 3px);
+  display: inline-block;
+  font-family: 'Proxima Nova Rg';
+  font-weight: normal;
+  font-style: normal;
+  &:first-of-type {
+    margin-right: calc(9% + 6px);
+  }
   label {
     line-height: $font-size + 46px;
-    height: $font-size + 30px;
+    height: $font-size + 46px;
   }
 }
 .material-textarea { 
-  height: $textarea-height + 52px; 
+  font-family: 'Proxima Nova Rg';
+  font-weight: normal;
+  font-style: normal;
+  height: $textarea-height + 60px; 
+  width: calc(100% - 2px);
   label {
     line-height: $font-size + 46px;
     height: $textarea-height + 30px;
@@ -65,10 +87,9 @@ form:invalid .material-button {
 }
 .material-input, .material-textarea {
   position: relative;
-  width: 300px;
+  // width: 300px;
   margin-bottom: 6px;
   overflow: hidden;
-  font-family: arial, sans-serif;
   label, input, textarea, .error {
     position: absolute;
     left: 0;
@@ -119,7 +140,7 @@ form:invalid .material-button {
     }
   }
   label {
-    color: #666;
+    color: black;
     transition: .2s all cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: inset 0px -1px #aaa;
     z-index: 1;

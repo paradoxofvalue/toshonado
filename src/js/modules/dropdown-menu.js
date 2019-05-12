@@ -3,7 +3,8 @@ const DropdownMenu = {
     var toggle = document.querySelector('.toggle'),
       aside = document.querySelector('aside');
 
-    toggle.addEventListener('click', function () {
+    toggle.addEventListener('click', function (event) {
+      event.preventDefault();
       toggle.classList.toggle('opened');
       aside.classList.toggle('visible')
     })

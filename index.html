@@ -180,34 +180,38 @@
     </section>
     <section class="contacts">
       <h3 class="header--primary">Контакты</h3>
-      <div class="contacts__peopleContact"></div>
-      <div class="contacts__content">
-        <div class="contacts__items">
-          <div class="contacts__emails">
-            <a class="contacts__email" href="mailto:pr.toshonado@gmail.com">pr.toshonado@gmail.com (Киев)</a>
-            <a class="contacts__email" href="mailto:toshonado.kha@gmail.com">toshonado.kha@gmail.com (Харьков)</a>
+      <div class="contacts__wrapper">
+        <div class="contacts__peopleContact"></div>
+        <div class="contacts__content">
+          <div class="contacts__items">
+            <div class="contacts__item">
+              <h5 class="contacts__header contacts__header--email">E-Mail</h5>
+              <a class="contacts__link" href="mailto:pr.toshonado@gmail.com">pr.toshonado@gmail.com (Киев)</a>
+              <a class="contacts__link" href="mailto:toshonado.kha@gmail.com">toshonado.kha@gmail.com (Харьков)</a>
+            </div>
+            <div class="contacts__item">
+              <h5 class="contacts__header contacts__header--phone">Телефон</h5>
+              <a class="contacts__link" href="tel:+38067467-70-07">+38 (067) 467-70-07 (Киев)</a>
+              <a class="contacts__link" href="tel:+38098378-98-98">+38 (098) 378-98-98 (Харьков)</a>
+            </div>
           </div>
-          <div class="contacts__phones">
-            <a class="contacts__phone" href="tel:+38067467-70-07">+38 (067) 467-70-07 (Киев)</a>
-            <a class="contacts__phone" href="tel:+38098378-98-98">+38 (098) 378-98-98 (Харьков)</a>
+          <div class="contact__form">
+            <h5 class="contacts__header contacts__header--form">Оставьте заявку и мы Вам перезвоним!</h5>
+            <form action="" class="material__form">
+                <div class="material-input">
+                  <input id="name" minlength="2" placeholder="" required="true" type="text" /><label for="name">Ваше имя*</label><span class="error">Введите как минимум 2 буквы</span>
+                </div>
+                <div class="material-input">
+                  <input id="phone" placeholder=" " required="true" type="phone" /><label for="phone">Ваш телефон*</label><span class="error">Что-то не так!</span>
+                </div>
+                <div class="material-textarea">
+                  <textarea id="body" maxlength="500" minlength="10" onkeyup="document.getElementById(&#39;counter&#39;).innerHTML = this.value.length;" placeholder=" "></textarea><label for="body">Сообщение</label><span class="error">Не меньше 10 букв</span><span id="counter">0</span>
+                </div>
+                <button class="material-button" type="submit">Отправить</button>
+            </form>
           </div>
         </div>
-        <div class="contact__form">
-          <h5 class="contact__header">Оставьте заявку и мы Вам перезвоним!</h5>
-          <form action="">
-              <div class="material-input">
-                <input id="name" minlength="2" placeholder="" required="true" type="text" /><label for="name">Ваше имя*</label><span class="error">Введите как минимум 2 буквы</span>
-              </div>
-              <div class="material-input">
-                <input id="phone" placeholder=" " required="true" type="phone" /><label for="phone">Ваш телефон*</label><span class="error">Что-то не так!</span>
-              </div>
-              <div class="material-textarea">
-                <textarea id="body" maxlength="500" minlength="10" onkeyup="document.getElementById(&#39;counter&#39;).innerHTML = this.value.length;" placeholder=" " required="true"></textarea><label for="body">Сообщение</label><span class="error">Не меньше 10 букв</span><span id="counter">0</span>
-              </div>
-              <button class="material-button" type="submit">Send info</button>
-          </form>
-        </div>
-      </div>
+      </div>      
     </section>
   </main>
   <footer class="wrapper footer">
