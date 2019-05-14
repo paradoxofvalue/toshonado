@@ -7,6 +7,7 @@ import Lang from './modules/lang';
 import DropdownMenu from './modules/dropdown-menu'
 import Mask from './modules/jquery-mask-plugin'
 import Carousels from './modules/carousels';
+import SmoothTo from './modules/smoothTo';
 
 (($) => {
   // When DOM is ready
@@ -15,5 +16,6 @@ import Carousels from './modules/carousels';
     DropdownMenu.init();
     Mask.init();
     Carousels.init();
+    SmoothTo.init();
   });
 })(jQuery);
