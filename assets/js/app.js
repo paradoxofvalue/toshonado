@@ -17,12 +17,11 @@ var _carousels = require('./modules/carousels');
 
 var _carousels2 = _interopRequireDefault(_carousels);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _smoothTo = require('./modules/smoothTo');
 
-// You can write a call and import your functions in this file.
-//
-// This file will be compiled into app.js and will not be minified.
-// Feel free with using ES6 here.
+var _smoothTo2 = _interopRequireDefault(_smoothTo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function ($) {
   // When DOM is ready
@@ -31,10 +30,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     _dropdownMenu2.default.init();
     _jqueryMaskPlugin2.default.init();
     _carousels2.default.init();
+    _smoothTo2.default.init();
   });
-})(jQuery);
+})(jQuery); // You can write a call and import your functions in this file.
+//
+// This file will be compiled into app.js and will not be minified.
+// Feel free with using ES6 here.
 
-},{"./modules/carousels":2,"./modules/dropdown-menu":3,"./modules/jquery-mask-plugin":4,"./modules/lang":5}],2:[function(require,module,exports){
+},{"./modules/carousels":2,"./modules/dropdown-menu":3,"./modules/jquery-mask-plugin":4,"./modules/lang":5,"./modules/smoothTo":6}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -133,23 +136,66 @@ exports.default = Mask;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var Lang = {
   init: function init() {
+    var _ua, _ru;
+
     var arrLang = {
-      'en': {
-        'home': 'Home',
-        'about': 'About Us',
-        'contact': 'Contact Us'
-      },
-      'ru': {
-        'home': 'Главная',
-        'about': 'О компании',
-        'contact': 'Контакты'
-      }
+      'ua': (_ua = {
+        'nav_about': 'Про нас',
+        'nav_friends': 'Наші друзі',
+        'nav_partners': 'Наші партнери',
+        'nav_social': 'Соціальна відповідальність',
+        'nav_contacts': 'Соціальна відповідальність',
+        /** hero section */
+        'hero_description': 'Маркетингове агентство повного циклу',
+        'hero_secondaryHeader_1': 'Потрібна реклама або медіапідтримка?',
+        'hero_secondaryHeader_2': 'Агенція ToShoNado має саме те що вам треба!',
+        /** about section */
+        'about_secondaryHeader': 'Вам потрібен резонанс, інформаційний супровід або реклама? Наша команда це забезпечить! Бо ми ToShoNado Agency!',
+        'about_text_1': 'ToShoNado – це молодий бренд з давньою історією успіху. З 2002 року займаємося інформаційним супроводом великого бізнесу, політичних і державних організацій в якості PR-підрозділу одного з найвпливовіших медіа-холдингів країни. З 2018 року здобули «незалежність», відкрили у Києві та Харкові офіси під брендом «ToShoNado».',
+        'about_text_2': 'Ми ЄДИНЕ в Україні маркетингове агентство, яке має власний медіаресурс на 15 млн читачів щомісячно. За нашими плечима десятки успішних кейсів, досвідчені фахівці, впливові партнери та масштабні медіапроекти.',
+        /** partners section */
+        'partners_secondaryHeader': 'Портфоліо',
+        /** social section */
+        'social_secondaryHeader_1': 'Всеукраїнський проект «Екоофіс» - те, чим ми пишаємось найбільше!',
+        'social_ach_tree': '800 збережених дерев',
+        'social_ach_paper': '420 тонн зібраної макулатури',
+        'social_ach_earth': 'Щорічна посадка дерев на День Землі',
+        'social_ach_events': '2 офлайн і 2 онлайн заходи в рік',
+        'social_ach_gau': 'Кращий соціальний проект 2011 року за версією Green Awards Ukraine'
+      }, _defineProperty(_ua, 'social_secondaryHeader_1', 'Участь в ініціативі USAID «Regional monitoring and analysis for 100% of Life»'), _defineProperty(_ua, 'social_part_prozoro', 'Моніторинг закупівель лікарських засобів через систему ProZorro'), _defineProperty(_ua, 'social_part_coop', 'Робота над проектом в кооперації з «Сomments.ua»'), _defineProperty(_ua, 'social_part_corrupt', 'Викриття корупційних схем в лікарнях і госпіталях на мільйони гривень'), _defineProperty(_ua, 'contacts_phone_kyiv', 'pr.toshonado@gmail.com (Київ)'), _defineProperty(_ua, 'contacts_phone_kharkiv', 'toshonado.kha@gmail.com (Харків)'), _defineProperty(_ua, 'contacts_email_kyiv', '+38 (067) 467-70-07 (Київ)'), _defineProperty(_ua, 'contacts_email_kharkiv', '+38 (098) 378-98-98 (Харків)'), _defineProperty(_ua, 'contacts_secondaryHeader', 'Залиште заявку і ми Вам зателефонуємо!'), _defineProperty(_ua, 'contacts_name', 'Ваше і\'мя*'), _defineProperty(_ua, 'contacts_name_error', 'Введіть як мінімум 2 літери'), _defineProperty(_ua, 'contacts_phone', 'Ваш телефон*'), _defineProperty(_ua, 'contacts_phone_error', 'Щось не так!'), _defineProperty(_ua, 'contacts_message', 'Повідомлення'), _defineProperty(_ua, 'contacts_message_error', 'Не менше 10 букв'), _defineProperty(_ua, 'contacts_send', 'Надіслати'), _defineProperty(_ua, 'footer_address_kyiv', 'м. Київ, вул. Василя Яна, 3/5'), _defineProperty(_ua, 'footer_address_kharkiv', 'м. Харків, пр. Гагаріна, 50'), _ua),
+      'ru': (_ru = {
+        'nav_about': 'О нас',
+        'nav_friends': 'Наши друзья',
+        'nav_partners': 'Наши партнеры',
+        'nav_social': 'Социальная ответственность',
+        'nav_contacts': 'Контакты',
+        /** hero section */
+        'hero_description': 'Маркетинговое агенство полного цикла',
+        'hero_secondaryHeader_1': 'Нужна реклама или медиаподдержка?',
+        'hero_secondaryHeader_2': 'У нас есть для вас ToShoNado!',
+        /** about section */
+        'about_secondaryHeader': 'Вам нужен резонанс, информационное сопровождение или реклама? Мы это обеспечим!',
+        'about_text_1': 'ToShoNado — это молодой бренд, но с давней историей успеха. С 2002 года занимаемся информационным сопровождением бизнеса, политических и государственных организаций в качестве PR-подразделения одного из крупнейших в Украине медиа-холдингов.',
+        'about_text_2': 'С 2018 года обрели «независимость», открыли в Киеве и Харькове офисы под брендом «ToShoNado».  Мы — ЕДИНСТВЕННОЕ в Украине маркетинговое агентство, которое имеет собственный медиаресурс в 15 млн читателей/подпичиков в месяц. За нашими плечами десятки успешных кейсов, опытные специалисты, крупные клиенты и масштабные медиапроекты.',
+        /** partners section */
+        'partners_secondaryHeader': 'Портфолио',
+        /** social section */
+        'social_secondaryHeader_1': 'Наша гордость — всеукраинский проект «Экоофис»',
+        'social_ach_tree': '800 сохраненных деревьев',
+        'social_ach_paper': '420 тонн собранной макулатуры',
+        'social_ach_earth': 'Ежегодная посадка деревьев на День Земли',
+        'social_ach_events': '2 офлайн и 2 онлайн мероприятия в год',
+        'social_ach_gau': 'Лучший социальный проект 2011 года по версии Green Awards Ukraine'
+      }, _defineProperty(_ru, 'social_secondaryHeader_1', 'Участие в инициативе USAID «Regional monitoring and analysis for 100% of Life»'), _defineProperty(_ru, 'social_part_prozoro', 'Мониторинг закупок лекарственных средств через систему ProZorro'), _defineProperty(_ru, 'social_part_coop', 'Работа над проектом в кооперации  с «Сomments.ua»'), _defineProperty(_ru, 'social_part_corrupt', 'Разоблачение коррупционных схем в больницах и госпиталях на миллионы гривен'), _defineProperty(_ru, 'contacts_phone_kyiv', 'pr.toshonado@gmail.com (Киев)'), _defineProperty(_ru, 'contacts_phone_kharkiv', 'toshonado.kha@gmail.com (Харьков)'), _defineProperty(_ru, 'contacts_email_kyiv', '+38 (067) 467-70-07 (Киев)'), _defineProperty(_ru, 'contacts_email_kharkiv', '+38 (098) 378-98-98 (Харьков)'), _defineProperty(_ru, 'contacts_secondaryHeader', 'Оставьте заявку и мы Вам перезвоним!'), _defineProperty(_ru, 'contacts_name', 'Ваше имя*'), _defineProperty(_ru, 'contacts_name_error', 'Введите как минимум 2 буквы'), _defineProperty(_ru, 'contacts_phone', 'Ваш телефон*'), _defineProperty(_ru, 'contacts_phone_error', 'Что-то не так!'), _defineProperty(_ru, 'contacts_message', 'Сообщение'), _defineProperty(_ru, 'contacts_message_error', 'Не меньше 10 букв'), _defineProperty(_ru, 'contacts_send', 'Отправить'), _defineProperty(_ru, 'footer_address_kyiv', 'г. Киев, 01033 ул. Василия Яна 3/5'), _defineProperty(_ru, 'footer_address_kharkiv', 'г. Харьков, пр. Гагарина, 50'), _ru)
     };
 
-    $('.translate').click(function () {
-      var lang = $(this).attr('id');
+    $('.lang-select').change(function () {
+      var lang = $(this).val();
       $('.lang').each(function (index, element) {
         $(this).text(arrLang[lang][$(this).attr('key')]);
       });
@@ -158,5 +204,49 @@ var Lang = {
 };
 
 exports.default = Lang;
+
+},{}],6:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var SmoothTo = {
+  init: function init() {
+    // Select all links with hashes
+    $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+    .not('[href="#"]').not('[href="#0"]').click(function (event) {
+      // On-page links
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        // Figure out element to scroll to
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        // Does a scroll target exist?
+        if (target.length) {
+          // Only prevent default if animation is actually gonna happen
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 100, function () {
+            // Callback after animation
+            // Must change focus!
+            var $target = $(target);
+            $target.focus();
+            if ($target.is(":focus")) {
+              // Checking if the target was focused
+              return false;
+            } else {
+              $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+              $target.focus(); // Set focus again
+            };
+          });
+        }
+      }
+    });
+  }
+};
+
+exports.default = SmoothTo;
 
 },{}]},{},[1]);
