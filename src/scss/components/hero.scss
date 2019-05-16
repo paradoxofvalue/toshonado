@@ -5,26 +5,28 @@
   display: flex;
   justify-content: center;
   &__header {
-    font-size: 10em;
+    font-size: 9.15em;
     font-family: 'Proxima Nova Lt';
     font-weight: 600;
     font-style: normal;
     line-height: 1;
     position: relative;
     &:before {
-      height: 1em;
+      height: 100px;
       position: relative;
       bottom: 0;
       content: "";
-      width: 1em;
+      width: 130px;
       display: inline-block;
       background-image: url('/assets/images/toShоNado-text.png');
       background-repeat: no-repeat;
-      background-position-y: 100%;
+      background-position-y: bottom;
+      background-size: contain;
+      background-position-x: right;
     }
     &:after {
-      height: 30px;
-      width: 30px;
+      height: 20px;
+      width: 20px;
       border-radius: 50%;
       background-color: $green;
       box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
@@ -40,12 +42,11 @@
     }
     &Description {
       font-size: 1.33em;
-      width: 400px;
+      width: 320px;
       font-family: 'Proxima Nova Lt';
       font-weight: 600;
       font-style: normal;
       position: relative;
-      top: -20px;
       line-height: 1.2;
     }
   }

@@ -9,6 +9,7 @@
     flex-basis: 33%;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 60px;
     .ourAchievement {
       &__item {
         width: 33%;
@@ -21,9 +22,16 @@
       &__description {
         width: 65%;
         margin: 40px auto;
-        font-family: 'Proxima Nova Th';
-        font-weight: 800;
+        font-family: 'Proxima Nova Rg';
+        font-weight: 600;
         font-style: normal;
+        strong {
+          display: block;
+          font-family: 'Proxima Nova Th';
+          font-weight: 800;
+          font-style: normal;
+          font-size: 1.5em;
+        }
       }
     }
   }
@@ -53,6 +61,7 @@
     font-style: normal;
     padding: 60px 32px;
     position: relative;
+    
     &:before, &:after {
       content: '';
       background-color: transparent;

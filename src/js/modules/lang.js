@@ -6,7 +6,7 @@ const Lang = {
         'nav_friends': 'Наші друзі',
         'nav_partners': 'Наші партнери',
         'nav_social': 'Соціальна відповідальність',
-        'nav_contacts': 'Соціальна відповідальність',
+        'nav_contacts': 'Контакти',
         /** hero section */
         'hero_description': 'Маркетингове агентство повного циклу',
         'hero_secondaryHeader_1': 'Потрібна реклама або медіапідтримка?',
@@ -19,22 +19,22 @@ const Lang = {
         'partners_secondaryHeader': 'Портфоліо',
         /** social section */
         'social_secondaryHeader_1': 'Всеукраїнський проект «Екоофіс» - те, чим ми пишаємось найбільше!',
-        'social_ach_tree': '800 збережених дерев',
-        'social_ach_paper': '420 тонн зібраної макулатури',
-        'social_ach_earth': 'Щорічна посадка дерев на День Землі',
-        'social_ach_events': '2 офлайн і 2 онлайн заходи в рік',
-        'social_ach_gau': 'Кращий соціальний проект 2011 року за версією Green Awards Ukraine',
+        'social_ach_tree': '<strong>800</strong> збережених дерев',
+        'social_ach_paper': '<strong>420</strong> тонн зібраної макулатури',
+        'social_ach_earth': '<strong>Щорічна</strong> посадка дерев на День Землі',
+        'social_ach_events': '<strong>2 офлайн і 2 онлайн</strong> заходи в рік',
+        'social_ach_gau': 'Кращий соціальний проект 2011 року за версією <strong>Green Awards Ukraine</strong>',
         'social_secondaryHeader_1': 'Участь в ініціативі USAID «Regional monitoring and analysis for 100% of Life»',
-        'social_part_prozoro': 'Моніторинг закупівель лікарських засобів через систему ProZorro',
-        'social_part_coop': 'Робота над проектом в кооперації з «Сomments.ua»',
-        'social_part_corrupt': 'Викриття корупційних схем в лікарнях і госпіталях на мільйони гривень',
+        'social_part_prozoro': 'Моніторинг закупівель лікарських засобів через систему <strong>ProZorro</strong>',
+        'social_part_coop': 'Робота над проектом в кооперації з <strong>«Сomments.ua»</strong>',
+        'social_part_corrupt': '<strong>Викриття</strong> корупційних схем в лікарнях і госпіталях на мільйони гривень',
         /** contacts section */
         'contacts_phone_kyiv': 'pr.toshonado@gmail.com (Київ)',
         'contacts_phone_kharkiv': 'toshonado.kha@gmail.com (Харків)',
         'contacts_email_kyiv': '+38 (067) 467-70-07 (Київ)',
         'contacts_email_kharkiv': '+38 (098) 378-98-98 (Харків)',
         'contacts_secondaryHeader': 'Залиште заявку і ми Вам зателефонуємо!',
-        'contacts_name': 'Ваше і\'мя*',
+        'contacts_name': 'Ваше ім\'я*',
         'contacts_name_error': 'Введіть як мінімум 2 літери',
         'contacts_phone': 'Ваш телефон*',
         'contacts_phone_error': 'Щось не так!',
@@ -63,11 +63,11 @@ const Lang = {
         'partners_secondaryHeader': 'Портфолио',
         /** social section */
         'social_secondaryHeader_1': 'Наша гордость — всеукраинский проект «Экоофис»',
-        'social_ach_tree': '800 сохраненных деревьев',
-        'social_ach_paper': '420 тонн собранной макулатуры',
-        'social_ach_earth': 'Ежегодная посадка деревьев на День Земли',
-        'social_ach_events': '2 офлайн и 2 онлайн мероприятия в год',
-        'social_ach_gau': 'Лучший социальный проект 2011 года по версии Green Awards Ukraine',
+        'social_ach_tree': '<strong>800</strong> сохраненных деревьев',
+        'social_ach_paper': '<strong>420</strong> тонн собранной макулатуры',
+        'social_ach_earth': '<strong>Ежегодная</strong> посадка деревьев на День Земли',
+        'social_ach_events': '<strong>2 офлайн и 2 онлайн</strong> мероприятия в год',
+        'social_ach_gau': 'Лучший социальный проект 2011 года по версии <strong>Green Awards Ukraine</strong>',
         'social_secondaryHeader_1': 'Участие в инициативе USAID «Regional monitoring and analysis for 100% of Life»',
         'social_part_prozoro': 'Мониторинг закупок лекарственных средств через систему ProZorro',
         'social_part_coop': 'Работа над проектом в кооперации  с «Сomments.ua»',
@@ -94,7 +94,7 @@ const Lang = {
     $('.lang-select').change(function() {
       var lang = $(this).val();
       $('.lang').each(function(index, element) {
-        $(this).text(arrLang[lang][$(this).attr('key')]);
+        $(this).html(arrLang[lang][$(this).attr('key')]);
       });
     });
   },

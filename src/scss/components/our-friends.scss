@@ -89,6 +89,7 @@
     }
 
     .ourFriend__description {
+      display: none;
       &:before {
         content: '';
         width: 70px;
