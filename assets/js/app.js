@@ -149,7 +149,7 @@ var Lang = {
         'nav_friends': 'Наші друзі',
         'nav_partners': 'Наші партнери',
         'nav_social': 'Соціальна відповідальність',
-        'nav_contacts': 'Соціальна відповідальність',
+        'nav_contacts': 'Контакти',
         /** hero section */
         'hero_description': 'Маркетингове агентство повного циклу',
         'hero_secondaryHeader_1': 'Потрібна реклама або медіапідтримка?',
@@ -162,12 +162,12 @@ var Lang = {
         'partners_secondaryHeader': 'Портфоліо',
         /** social section */
         'social_secondaryHeader_1': 'Всеукраїнський проект «Екоофіс» - те, чим ми пишаємось найбільше!',
-        'social_ach_tree': '800 збережених дерев',
-        'social_ach_paper': '420 тонн зібраної макулатури',
-        'social_ach_earth': 'Щорічна посадка дерев на День Землі',
-        'social_ach_events': '2 офлайн і 2 онлайн заходи в рік',
-        'social_ach_gau': 'Кращий соціальний проект 2011 року за версією Green Awards Ukraine'
-      }, _defineProperty(_ua, 'social_secondaryHeader_1', 'Участь в ініціативі USAID «Regional monitoring and analysis for 100% of Life»'), _defineProperty(_ua, 'social_part_prozoro', 'Моніторинг закупівель лікарських засобів через систему ProZorro'), _defineProperty(_ua, 'social_part_coop', 'Робота над проектом в кооперації з «Сomments.ua»'), _defineProperty(_ua, 'social_part_corrupt', 'Викриття корупційних схем в лікарнях і госпіталях на мільйони гривень'), _defineProperty(_ua, 'contacts_phone_kyiv', 'pr.toshonado@gmail.com (Київ)'), _defineProperty(_ua, 'contacts_phone_kharkiv', 'toshonado.kha@gmail.com (Харків)'), _defineProperty(_ua, 'contacts_email_kyiv', '+38 (067) 467-70-07 (Київ)'), _defineProperty(_ua, 'contacts_email_kharkiv', '+38 (098) 378-98-98 (Харків)'), _defineProperty(_ua, 'contacts_secondaryHeader', 'Залиште заявку і ми Вам зателефонуємо!'), _defineProperty(_ua, 'contacts_name', 'Ваше і\'мя*'), _defineProperty(_ua, 'contacts_name_error', 'Введіть як мінімум 2 літери'), _defineProperty(_ua, 'contacts_phone', 'Ваш телефон*'), _defineProperty(_ua, 'contacts_phone_error', 'Щось не так!'), _defineProperty(_ua, 'contacts_message', 'Повідомлення'), _defineProperty(_ua, 'contacts_message_error', 'Не менше 10 букв'), _defineProperty(_ua, 'contacts_send', 'Надіслати'), _defineProperty(_ua, 'footer_address_kyiv', 'м. Київ, вул. Василя Яна, 3/5'), _defineProperty(_ua, 'footer_address_kharkiv', 'м. Харків, пр. Гагаріна, 50'), _ua),
+        'social_ach_tree': '<strong>800</strong> збережених дерев',
+        'social_ach_paper': '<strong>420</strong> тонн зібраної макулатури',
+        'social_ach_earth': '<strong>Щорічна</strong> посадка дерев на День Землі',
+        'social_ach_events': '<strong>2 офлайн і 2 онлайн</strong> заходи в рік',
+        'social_ach_gau': 'Кращий соціальний проект 2011 року за версією <strong>Green Awards Ukraine</strong>'
+      }, _defineProperty(_ua, 'social_secondaryHeader_1', 'Участь в ініціативі USAID «Regional monitoring and analysis for 100% of Life»'), _defineProperty(_ua, 'social_part_prozoro', 'Моніторинг закупівель лікарських засобів через систему <strong>ProZorro</strong>'), _defineProperty(_ua, 'social_part_coop', 'Робота над проектом в кооперації з <strong>«Сomments.ua»</strong>'), _defineProperty(_ua, 'social_part_corrupt', '<strong>Викриття</strong> корупційних схем в лікарнях і госпіталях на мільйони гривень'), _defineProperty(_ua, 'contacts_phone_kyiv', 'pr.toshonado@gmail.com (Київ)'), _defineProperty(_ua, 'contacts_phone_kharkiv', 'toshonado.kha@gmail.com (Харків)'), _defineProperty(_ua, 'contacts_email_kyiv', '+38 (067) 467-70-07 (Київ)'), _defineProperty(_ua, 'contacts_email_kharkiv', '+38 (098) 378-98-98 (Харків)'), _defineProperty(_ua, 'contacts_secondaryHeader', 'Залиште заявку і ми Вам зателефонуємо!'), _defineProperty(_ua, 'contacts_name', 'Ваше ім\'я*'), _defineProperty(_ua, 'contacts_name_error', 'Введіть як мінімум 2 літери'), _defineProperty(_ua, 'contacts_phone', 'Ваш телефон*'), _defineProperty(_ua, 'contacts_phone_error', 'Щось не так!'), _defineProperty(_ua, 'contacts_message', 'Повідомлення'), _defineProperty(_ua, 'contacts_message_error', 'Не менше 10 букв'), _defineProperty(_ua, 'contacts_send', 'Надіслати'), _defineProperty(_ua, 'footer_address_kyiv', 'м. Київ, вул. Василя Яна, 3/5'), _defineProperty(_ua, 'footer_address_kharkiv', 'м. Харків, пр. Гагаріна, 50'), _ua),
       'ru': (_ru = {
         'nav_about': 'О нас',
         'nav_friends': 'Наши друзья',
@@ -186,18 +186,18 @@ var Lang = {
         'partners_secondaryHeader': 'Портфолио',
         /** social section */
         'social_secondaryHeader_1': 'Наша гордость — всеукраинский проект «Экоофис»',
-        'social_ach_tree': '800 сохраненных деревьев',
-        'social_ach_paper': '420 тонн собранной макулатуры',
-        'social_ach_earth': 'Ежегодная посадка деревьев на День Земли',
-        'social_ach_events': '2 офлайн и 2 онлайн мероприятия в год',
-        'social_ach_gau': 'Лучший социальный проект 2011 года по версии Green Awards Ukraine'
+        'social_ach_tree': '<strong>800</strong> сохраненных деревьев',
+        'social_ach_paper': '<strong>420</strong> тонн собранной макулатуры',
+        'social_ach_earth': '<strong>Ежегодная</strong> посадка деревьев на День Земли',
+        'social_ach_events': '<strong>2 офлайн и 2 онлайн</strong> мероприятия в год',
+        'social_ach_gau': 'Лучший социальный проект 2011 года по версии <strong>Green Awards Ukraine</strong>'
       }, _defineProperty(_ru, 'social_secondaryHeader_1', 'Участие в инициативе USAID «Regional monitoring and analysis for 100% of Life»'), _defineProperty(_ru, 'social_part_prozoro', 'Мониторинг закупок лекарственных средств через систему ProZorro'), _defineProperty(_ru, 'social_part_coop', 'Работа над проектом в кооперации  с «Сomments.ua»'), _defineProperty(_ru, 'social_part_corrupt', 'Разоблачение коррупционных схем в больницах и госпиталях на миллионы гривен'), _defineProperty(_ru, 'contacts_phone_kyiv', 'pr.toshonado@gmail.com (Киев)'), _defineProperty(_ru, 'contacts_phone_kharkiv', 'toshonado.kha@gmail.com (Харьков)'), _defineProperty(_ru, 'contacts_email_kyiv', '+38 (067) 467-70-07 (Киев)'), _defineProperty(_ru, 'contacts_email_kharkiv', '+38 (098) 378-98-98 (Харьков)'), _defineProperty(_ru, 'contacts_secondaryHeader', 'Оставьте заявку и мы Вам перезвоним!'), _defineProperty(_ru, 'contacts_name', 'Ваше имя*'), _defineProperty(_ru, 'contacts_name_error', 'Введите как минимум 2 буквы'), _defineProperty(_ru, 'contacts_phone', 'Ваш телефон*'), _defineProperty(_ru, 'contacts_phone_error', 'Что-то не так!'), _defineProperty(_ru, 'contacts_message', 'Сообщение'), _defineProperty(_ru, 'contacts_message_error', 'Не меньше 10 букв'), _defineProperty(_ru, 'contacts_send', 'Отправить'), _defineProperty(_ru, 'footer_address_kyiv', 'г. Киев, 01033 ул. Василия Яна 3/5'), _defineProperty(_ru, 'footer_address_kharkiv', 'г. Харьков, пр. Гагарина, 50'), _ru)
     };
 
     $('.lang-select').change(function () {
       var lang = $(this).val();
       $('.lang').each(function (index, element) {
-        $(this).text(arrLang[lang][$(this).attr('key')]);
+        $(this).html(arrLang[lang][$(this).attr('key')]);
       });
     });
   }
