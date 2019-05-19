@@ -4,6 +4,9 @@
   align-items: center;
   min-width: 4rem;
   position: relative;
+  @media screen and (max-width: 768px) {
+    min-width: 2rem;
+  }
 
   aside {
     visibility: hidden; /* toggled by JavaScript */
@@ -16,6 +19,13 @@
     right: 0;
     box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.3);
     transition: 0.3s ease;
+    @media screen and (max-width: 768px) {
+      width: 20rem;
+    }
+    @media screen and (max-width: 360px) {
+      width: 16.5rem;
+      padding: 10px 20px;
+    }
     &.visible {
       visibility: visible;
     }
@@ -80,6 +90,10 @@
     background-position: center center;
     background-repeat: no-repeat;
     transition: 0.3s ease;
+    @media screen and (max-width: 768px) {
+      width: 2rem;
+      background-size: contain;
+    }
 
     &.opened {
       background-image: url('/assets/images/icons/icon-menu-close.png');

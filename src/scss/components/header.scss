@@ -8,11 +8,19 @@
   justify-content: space-between;
   background: white;
   z-index: 11;
+  @media screen and (max-width: 768px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 70px;
+  }
   &__logo {
     &Link {
       min-width: 120px;
       height: 100%;
       font-size: 0;
+      @media screen and (max-width: 768px) {
+        min-width: 90px;
+      }
     }
     &Image {
       object-fit: contain;
@@ -34,6 +42,9 @@
       -moz-appearance: none;
       text-indent: 1px;
       text-overflow: '';
+      @media screen and (max-width: 768px) {
+        margin-right: 10px;
+      }
 
       background: url("/assets/images/icons/icon-arrow.png") no-repeat right .75rem center/10px 5px;
     

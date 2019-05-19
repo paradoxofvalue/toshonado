@@ -39,6 +39,10 @@ form:invalid .material-button {
   &:hover, &:focus {
     background-color: $green;
   }
+  @media screen and (max-width: 768px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .material-input { 
   height: 100px; 
@@ -53,6 +57,12 @@ form:invalid .material-button {
   label {
     line-height: $font-size + 46px;
     height: $font-size + 46px;
+  }
+  @media screen and (max-width: 650px) {
+    width: 100%;
+    &:first-of-type {
+      margin-right: 0;
+    }
   }
 }
 .material-textarea { 

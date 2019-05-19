@@ -4,6 +4,9 @@
   flex-direction: column;
   display: flex;
   justify-content: center;
+  @media screen and (max-width: 1024px) {
+    min-height: calc(50vh - 130px);
+  }
   &__header {
     font-size: 9.15em;
     font-family: 'Proxima Nova Lt';
@@ -11,6 +14,20 @@
     font-style: normal;
     line-height: 1;
     position: relative;
+
+    @media screen and (max-width: 1024px) {
+      padding-top: 60px;
+    }
+    @media screen and (max-width: 720px) {
+      font-size: 7em;
+    }
+    @media screen and (max-width: 560px) {
+      font-size: 5em;
+    }
+    @media screen and (max-width: 414px) {
+      font-size: 3.75em;
+    }
+
     &:before {
       height: 100px;
       position: relative;
@@ -23,6 +40,18 @@
       background-position-y: bottom;
       background-size: contain;
       background-position-x: right;
+      @media screen and (max-width: 720px) {
+        height: 75px;
+        width: 100px;
+      }
+      @media screen and (max-width: 560px) {
+        height: 55px;
+        width: 75px;
+      }
+      @media screen and (max-width: 414px) {
+        height: 43px;
+        width: 55px;
+      }
     }
     &:after {
       height: 20px;
@@ -39,10 +68,17 @@
       animation-timing-function: ease;
       animation-fill-mode: both;
       animation-direction: alternate;
+      @media screen and (max-width: 480px) {
+        height: 10px;
+        width: 10px;
+        position: absolute;
+        bottom: 7px;
+      }
     }
     &Description {
       font-size: 1.33em;
-      width: 320px;
+      max-width: 320px;
+      width: 100%;
       font-family: 'Proxima Nova Lt';
       font-weight: 600;
       font-style: normal;
@@ -54,6 +90,10 @@
     width: 70%;
     margin: 170px auto;
     position: relative;
+    @media screen and (max-width: 1024px) {
+      width: auto;
+      margin: 50px auto;
+    }
     &:before {
       content: '';
       height: 90px;
@@ -69,6 +109,9 @@
       animation-timing-function: ease;
       animation-fill-mode: both;
       animation-direction: alternate;
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
     }
   }
   &__secondaryHeader {
@@ -77,6 +120,9 @@
     font-style: normal;
     font-size: 2.16em;
     line-height: 1;
+    @media screen and (max-width: 1024px) {
+      font-size: 1.5em;
+    }
   }
   &__handWithTorchWrapper {
     height: 430px;
@@ -86,6 +132,9 @@
     width: 220px;
     overflow: visible;
     background-image: url('/assets/images/hand-with-torch.png');
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
     &:before {
       content: '';
       height: 150px;

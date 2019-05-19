@@ -4,6 +4,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media screen and (max-width: 1024px) {
+    min-height: calc(50vh - 130px);
+  }
   &Carousel {
     // margin-top: 60px;
     .owl-nav {
@@ -33,6 +36,8 @@
       div {
         margin-left: 20px;
         margin-right: 20px;
+        display: flex;
+        align-items: center;
       }
     }
   }
@@ -47,6 +52,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 1024px) {
+      padding: 30px;
+    }
+    @media screen and (max-width: 768px) {
+      padding: 15px;
+    }
     &:before, &:after {
       content: '';
       background-color: transparent;
@@ -77,17 +88,35 @@
       &:before {
         height: 30px;
         width: 30px;
+        @media screen and (max-width: 768px) {
+          height: 10px;
+          width: 10px;
+        }
       }
 
       &:after {
         height: 80px;
         width: 80px;
+        @media screen and (max-width: 768px) {
+          height: 30px;
+          width: 30px;
+        }
+      }
+      
+      .ourPartner__logo {
+        filter: grayscale(0);
       }
     }
   }
   &__logo {
     object-fit: contain;
-    height: 115px;
+    min-height: 210px;
+    // height: 115px;
+    filter: grayscale(100%);
+    transition: 0.3s ease;
+    @media screen and (max-width: 768px) {
+      min-height: 150px;
+    }
   }
   &__link {
     display: none;
