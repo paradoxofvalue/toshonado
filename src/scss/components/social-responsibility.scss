@@ -37,10 +37,11 @@
   }
   .ourParticipation {
     &__usaid {
-      width: 400px;
-      height: 120px;
+      width: 200px;
+      height: 200px;
       background-image: url('/assets/images/logos/usaid-logo.png');
       background-repeat: no-repeat;
+      background-size: contain;
     }
   }
   .header--usaid {
