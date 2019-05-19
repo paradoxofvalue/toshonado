@@ -48,13 +48,32 @@ var Carousels = {
     $('.ourFriendsCarousel').owlCarousel({
       loop: true,
       nav: true,
-      items: 2
+      items: 2,
+      responsive: {
+        0: {
+          nav: false
+        },
+        768: {
+          nav: true
+        }
+      }
     });
     $('.ourPartnersCarousel').owlCarousel({
       // loop: true,
       items: 3,
       nav: true,
       slideBy: 3,
+      responsive: {
+        0: {
+          items: 2,
+          onInitialized: drawPages,
+          onDragged: redrawPages,
+          onTranslated: redrawPages
+        },
+        1024: {
+          items: 3
+        }
+      },
       onInitialized: drawPages,
       onDragged: redrawPages,
       onTranslated: redrawPages
