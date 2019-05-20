@@ -110,12 +110,22 @@ Object.defineProperty(exports, "__esModule", {
 var DropdownMenu = {
   init: function init() {
     var toggle = document.querySelector('.toggle'),
-        aside = document.querySelector('aside');
+        aside = document.querySelector('aside'),
+        body = document.querySelector('body');
 
     toggle.addEventListener('click', function (event) {
       event.preventDefault();
       toggle.classList.toggle('opened');
       aside.classList.toggle('visible');
+      body.classList.toggle('menu-opened');
+    });
+
+    body.addEventListener('click', function (event) {
+      if (event.target != toggle && body.classList.contains('menu-opened')) {
+        toggle.classList.remove('opened');
+        aside.classList.remove('visible');
+        body.classList.remove('menu-opened');
+      }
     });
 
     var property = "flow-into";
@@ -175,7 +185,7 @@ var Lang = {
         'hero_secondaryHeader_2': 'Агенція ToShoNado має саме те що вам треба!',
         /** about section */
         'about_secondaryHeader': 'Вам потрібен резонанс, інформаційний супровід або реклама? Наша команда це забезпечить! Бо ми ToShoNado Agency!',
-        'about_text_1': 'ToShoNado – це молодий бренд з давньою історією успіху. З 2002 року займаємося інформаційним супроводом великого бізнесу, політичних і державних організацій в якості PR-підрозділу одного з найвпливовіших медіа-холдингів країни. З 2018 року здобули «незалежність», відкрили у Києві та Харкові офіси під брендом «ToShoNado».',
+        'about_text_1': 'ToShoNado – це молодий бренд з давньою історією успіху. З 2002 року займаємося інформаційним супроводом великого бізнесу, політичних і державних організацій в якості PR-підрозділу одного з найвпливовіших медіахолдингів країни. З 2018 року здобули «незалежність», відкрили у Києві та Харкові офіси під брендом «ToShoNado».',
         'about_text_2': 'Ми ЄДИНЕ в Україні маркетингове агентство, яке має власний медіаресурс на 15 млн читачів щомісячно. За нашими плечима десятки успішних кейсів, досвідчені фахівці, впливові партнери та масштабні медіапроекти.',
         /** partners section */
         'partners_secondaryHeader': 'Портфоліо',
@@ -184,7 +194,7 @@ var Lang = {
         'social_ach_tree': '<strong>800</strong> збережених дерев',
         'social_ach_paper': '<strong>420</strong> тонн зібраної макулатури',
         'social_ach_earth': '<strong>Щорічна</strong> посадка дерев на День Землі',
-        'social_ach_events': '<strong>2 офлайн і 2 онлайн</strong> заходи в рік',
+        'social_ach_events': '<strong>2 офлайн і 2 онлайн</strong> заходи на рік',
         'social_ach_gau': 'Кращий соціальний проект 2011 року за версією <strong>Green Awards Ukraine</strong>'
       }, _defineProperty(_ua, 'social_secondaryHeader_1', 'Участь в ініціативі USAID «Regional monitoring and analysis for 100% of Life»'), _defineProperty(_ua, 'social_part_prozoro', 'Моніторинг закупівель лікарських засобів через систему <strong>ProZorro</strong>'), _defineProperty(_ua, 'social_part_coop', 'Робота над проектом в кооперації з <strong>«Сomments.ua»</strong>'), _defineProperty(_ua, 'social_part_corrupt', '<strong>Викриття</strong> корупційних схем в лікарнях і госпіталях на мільйони гривень'), _defineProperty(_ua, 'contacts_phone_kyiv', 'pr.toshonado@gmail.com (Київ)'), _defineProperty(_ua, 'contacts_phone_kharkiv', 'toshonado.kha@gmail.com (Харків)'), _defineProperty(_ua, 'contacts_email_kyiv', '+38 (067) 467-70-07 (Київ)'), _defineProperty(_ua, 'contacts_email_kharkiv', '+38 (098) 378-98-98 (Харків)'), _defineProperty(_ua, 'contacts_secondaryHeader', 'Залиште заявку і ми Вам зателефонуємо!'), _defineProperty(_ua, 'contacts_name', 'Ваше ім\'я*'), _defineProperty(_ua, 'contacts_name_error', 'Введіть як мінімум 2 літери'), _defineProperty(_ua, 'contacts_phone', 'Ваш телефон*'), _defineProperty(_ua, 'contacts_phone_error', 'Щось не так!'), _defineProperty(_ua, 'contacts_message', 'Повідомлення'), _defineProperty(_ua, 'contacts_message_error', 'Не менше 10 букв'), _defineProperty(_ua, 'contacts_send', 'Надіслати'), _defineProperty(_ua, 'footer_address_kyiv', 'м. Київ, вул. Василя Яна, 3/5'), _defineProperty(_ua, 'footer_address_kharkiv', 'м. Харків, пр. Гагаріна, 50'), _ua),
       'ru': (_ru = {
