@@ -106,6 +106,9 @@ form:invalid .material-button {
     width: 100%;
     font-size: $font-size;
   }
+  label {
+    font-size: $font-size - 4px;
+  }
   textarea {
     height: $textarea-height;
     resize: none;
