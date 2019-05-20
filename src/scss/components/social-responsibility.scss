@@ -94,6 +94,7 @@
     font-style: normal;
     padding: 60px 32px;
     position: relative;
+    font-size: 1.5rem;
     @media screen and (max-width: 768px) {
       max-width: unset;
       padding: 20px 10px;
@@ -129,8 +130,8 @@
       }
 
       &:before {
-        height: 30px;
-        width: 30px;
+        height: 20px;
+        width: 20px;
         @media screen and (max-width: 768px) {
           height: 10px;
           width: 10px;
@@ -138,8 +139,8 @@
       }
 
       &:after {
-        height: 80px;
-        width: 80px;
+        height: 60px;
+        width: 60px;
         @media screen and (max-width: 768px) {
           height: 30px;
           width: 30px;
