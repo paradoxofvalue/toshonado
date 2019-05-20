@@ -293,15 +293,15 @@
           </div>
           <div class="contact__form">
             <h5 class="lang contacts__header contacts__header--form" key="contacts_secondaryHeader">Залиште заявку і ми Вам зателефонуємо!</h5>
-            <form action="" class="material__form">
+            <form method="post" action="send.php" class="material__form">
                 <div class="material-input">
-                  <input id="name" minlength="2" placeholder=" " required="true" type="text" /><label class="lang " for="name" key="contacts_name">Ваше ім'я*</label><span class="lang error" key="contacts_name_error">Введіть як мінімум 2 літери</span>
+                  <input id="name" name="name" minlength="2" placeholder=" " required="true" type="text" /><label class="lang " for="name" key="contacts_name">Ваше ім'я*</label><span class="lang error" key="contacts_name_error">Введіть як мінімум 2 літери</span>
                 </div>
                 <div class="material-input">
-                  <input id="phone" placeholder=" " required="true" type="phone" /><label class="lang " for="phone" key="contacts_phone">Ваш телефон*</label><span class="lang error" key="contacts_phone_error">Щось не так!</span>
+                  <input id="phone" name="phone" placeholder=" " required="true" type="phone" /><label class="lang " for="phone" key="contacts_phone">Ваш телефон*</label><span class="lang error" key="contacts_phone_error">Щось не так!</span>
                 </div>
                 <div class="material-textarea">
-                  <textarea id="body" maxlength="500" minlength="10" onkeyup="document.getElementById(&#39;counter&#39;).innerHTML = this.value.length;" placeholder=" "></textarea><label class="lang " for="body" key="contacts_message">Повідомлення</label><span class="lang error" key="contacts_message_error">Не менше 10 букв</span><span id="counter">0</span>
+                  <textarea id="body" name="message" maxlength="500" minlength="10" onkeyup="document.getElementById(&#39;counter&#39;).innerHTML = this.value.length;" placeholder=" "></textarea><label class="lang " for="body" key="contacts_message">Повідомлення</label><span class="lang error" key="contacts_message_error">Не менше 10 букв</span><span id="counter">0</span>
                 </div>
                 <button class="lang material-button" type="submit" key="contacts_send">Надіслати</button>
             </form>

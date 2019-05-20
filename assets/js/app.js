@@ -21,7 +21,16 @@ var _smoothTo = require('./modules/smoothTo');
 
 var _smoothTo2 = _interopRequireDefault(_smoothTo);
 
+var _form = require('./modules/form');
+
+var _form2 = _interopRequireDefault(_form);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// You can write a call and import your functions in this file.
+//
+// This file will be compiled into app.js and will not be minified.
+// Feel free with using ES6 here.
 
 (function ($) {
   // When DOM is ready
@@ -31,13 +40,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     _jqueryMaskPlugin2.default.init();
     _carousels2.default.init();
     _smoothTo2.default.init();
+    _form2.default.init();
   });
-})(jQuery); // You can write a call and import your functions in this file.
-//
-// This file will be compiled into app.js and will not be minified.
-// Feel free with using ES6 here.
+})(jQuery);
 
-},{"./modules/carousels":2,"./modules/dropdown-menu":3,"./modules/jquery-mask-plugin":4,"./modules/lang":5,"./modules/smoothTo":6}],2:[function(require,module,exports){
+},{"./modules/carousels":2,"./modules/dropdown-menu":3,"./modules/form":4,"./modules/jquery-mask-plugin":5,"./modules/lang":6,"./modules/smoothTo":7}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -144,6 +151,41 @@ var DropdownMenu = {
 exports.default = DropdownMenu;
 
 },{}],4:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var Form = {
+  init: function init() {
+    $("form.material__form").on("submit", function (event) {
+      event.preventDefault();
+      var data = {
+        'name': $(this).find('[name="name"]').val(),
+        'phone': $(this).find('[name="phone"]').val(),
+        'message': $(this).find('[name="message"]').val()
+      };
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: data,
+        dataType: 'json',
+        success: function success(response) {
+          console.log(response);
+          alert(response.message);
+        },
+        error: function error(response) {
+          console.log(response);
+          alert(response.message);
+        }
+      });
+    });
+  }
+};
+
+exports.default = Form;
+
+},{}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -159,7 +201,7 @@ var Mask = {
 
 exports.default = Mask;
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -234,7 +276,7 @@ var Lang = {
 
 exports.default = Lang;
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
