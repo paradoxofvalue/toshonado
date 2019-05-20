@@ -1,12 +1,22 @@
 const DropdownMenu = {
   init() {
     var toggle = document.querySelector('.toggle'),
-      aside = document.querySelector('aside');
+      aside = document.querySelector('aside'),
+      body = document.querySelector('body');
 
     toggle.addEventListener('click', function (event) {
       event.preventDefault();
       toggle.classList.toggle('opened');
-      aside.classList.toggle('visible')
+      aside.classList.toggle('visible');
+      body.classList.toggle('menu-opened');
+    });
+
+    body.addEventListener('click', function (event) {
+      if (event.target != toggle && body.classList.contains('menu-opened')) {
+        toggle.classList.remove('opened');
+        aside.classList.remove('visible');
+        body.classList.remove('menu-opened');
+      }
     })
 
     var property = "flow-into";
