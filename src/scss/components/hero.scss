@@ -132,6 +132,7 @@
     width: 220px;
     overflow: visible;
     background-image: url('/assets/images/hand-with-torch.png');
+    background-repeat: no-repeat;
     @media screen and (max-width: 1024px) {
       display: none;
     }
