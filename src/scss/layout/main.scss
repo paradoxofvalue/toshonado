@@ -53,6 +53,9 @@ $green: #86b13b;
   @media screen and (max-width: 480px) {
     font-size: 2em;
   }
+  @media screen and (max-width: 420px) {
+    font-size: 1.5em;
+  }
   // &::before {
   //   content: '';
   //   height: 10px;
