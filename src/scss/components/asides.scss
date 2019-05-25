@@ -1,0 +1,40 @@
+.aside__pageNumber {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  transform: rotate(90deg);
+  left: -175px;
+  bottom: 30vh;
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+  .pageNumber__item {
+    display: flex;
+    align-items: center;
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.2;
+    font-size: 1.5rem;
+    &:before {
+      content: "";
+      width: 99px;
+      height: 4px;
+      display: inline-flex;
+      position: relative;
+      margin-right: 15px;
+      background-color: black;
+    }
+    &:after {
+      content: "";
+      width: 77px;
+      height: 7px;
+      background-image: url('/assets/images/page-count-dots.png');
+      display: inline-flex;
+      position: relative;
+      margin-left: 15px;
+    }
+  }
+}
