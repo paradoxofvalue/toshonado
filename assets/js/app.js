@@ -21,16 +21,15 @@ var _smoothTo = require('./modules/smoothTo');
 
 var _smoothTo2 = _interopRequireDefault(_smoothTo);
 
+var _scrollToNextSection = require('./modules/scrollToNextSection');
+
+var _scrollToNextSection2 = _interopRequireDefault(_scrollToNextSection);
+
 var _form = require('./modules/form');
 
 var _form2 = _interopRequireDefault(_form);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// You can write a call and import your functions in this file.
-//
-// This file will be compiled into app.js and will not be minified.
-// Feel free with using ES6 here.
 
 (function ($) {
   // When DOM is ready
@@ -40,11 +39,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     _jqueryMaskPlugin2.default.init();
     _carousels2.default.init();
     _smoothTo2.default.init();
+    _scrollToNextSection2.default.init();
     _form2.default.init();
   });
-})(jQuery);
+})(jQuery); // You can write a call and import your functions in this file.
+//
+// This file will be compiled into app.js and will not be minified.
+// Feel free with using ES6 here.
 
-},{"./modules/carousels":2,"./modules/dropdown-menu":3,"./modules/form":4,"./modules/jquery-mask-plugin":5,"./modules/lang":6,"./modules/smoothTo":7}],2:[function(require,module,exports){
+},{"./modules/carousels":2,"./modules/dropdown-menu":3,"./modules/form":4,"./modules/jquery-mask-plugin":5,"./modules/lang":6,"./modules/scrollToNextSection":7,"./modules/smoothTo":8}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -277,6 +280,39 @@ var Lang = {
 exports.default = Lang;
 
 },{}],7:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var SmoothToNextSection = {
+  init: function init() {
+
+    var scrollToNextSectionButton = document.querySelector('.scrollToNextSection'),
+        sectionIdsArray = ['about', 'friends', 'partners', 'social', 'contacts'];
+
+    scrollToNextSectionButton.addEventListener('click', function (event) {
+      // debugger;
+      event.preventDefault();
+      var currentY = window.pageYOffset,
+          sectionsY = [],
+          isTriggered = undefined;
+      sectionIdsArray.some(function (sectionId) {
+        var sectionElementY = document.querySelector('#' + sectionId).offsetTop;
+        if (currentY + 150 <= sectionElementY) {
+          $('html, body').animate({
+            scrollTop: sectionElementY
+          }, 100);
+          return true;
+        }
+      });
+    });
+  }
+};
+
+exports.default = SmoothToNextSection;
+
+},{}],8:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
