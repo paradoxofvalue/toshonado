@@ -38,3 +38,38 @@
     }
   }
 }
+
+.aside__socials {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 25px;
+  top: 25vh;
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+  .social__item {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 30px;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &--facebook {
+      background-image: url('/assets/images/icons/icon-facebook.png')
+    }
+    &--instagram {
+      background-image: url('/assets/images/icons/icon-instagram.png')
+    }
+    &--twitter {
+      background-image: url('/assets/images/icons/icon-twitter.png')
+    }
+    &--telegram {
+      background-image: url('/assets/images/icons/icon-telegram.png')
+    }
+  }
+}
