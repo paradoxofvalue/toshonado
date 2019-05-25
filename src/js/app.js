@@ -8,6 +8,7 @@ import DropdownMenu from './modules/dropdown-menu'
 import Mask from './modules/jquery-mask-plugin'
 import Carousels from './modules/carousels';
 import SmoothTo from './modules/smoothTo';
+import SmoothToNextSection from './modules/scrollToNextSection';
 import Form from './modules/form';
 
 (($) => {
@@ -18,6 +19,7 @@ import Form from './modules/form';
     Mask.init();
     Carousels.init();
     SmoothTo.init();
+    SmoothToNextSection.init();
     Form.init();
   });
 })(jQuery);
