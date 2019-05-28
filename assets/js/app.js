@@ -33,9 +33,13 @@ var _torchHover = require('./modules/torchHover');
 
 var _torchHover2 = _interopRequireDefault(_torchHover);
 
+var _lazyLoad = require('./modules/lazyLoad');
+
+var _lazyLoad2 = _interopRequireDefault(_lazyLoad);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// You can write a call and import your functions in this file.
+_lazyLoad2.default.init(); // You can write a call and import your functions in this file.
 //
 // This file will be compiled into app.js and will not be minified.
 // Feel free with using ES6 here.
@@ -54,7 +58,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   });
 })(jQuery);
 
-},{"./modules/carousels":2,"./modules/dropdown-menu":3,"./modules/form":4,"./modules/jquery-mask-plugin":5,"./modules/lang":6,"./modules/scrollToNextSection":7,"./modules/smoothTo":8,"./modules/torchHover":9}],2:[function(require,module,exports){
+},{"./modules/carousels":2,"./modules/dropdown-menu":3,"./modules/form":4,"./modules/jquery-mask-plugin":5,"./modules/lang":6,"./modules/lazyLoad":7,"./modules/scrollToNextSection":8,"./modules/smoothTo":9,"./modules/torchHover":10}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -287,6 +291,55 @@ var Lang = {
 exports.default = Lang;
 
 },{}],7:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var LazyLoad = {
+  init: function init() {
+    document.addEventListener("DOMContentLoaded", function () {
+      var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+      var active = false;
+
+      var lazyLoad = function lazyLoad() {
+        if (active === false) {
+          active = true;
+
+          setTimeout(function () {
+            lazyImages.forEach(function (lazyImage) {
+              if (lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0 && getComputedStyle(lazyImage).display !== "none") {
+                lazyImage.src = lazyImage.dataset.src;
+                lazyImage.srcset = lazyImage.dataset.srcset;
+                lazyImage.classList.remove("lazy");
+
+                lazyImages = lazyImages.filter(function (image) {
+                  return image !== lazyImage;
+                });
+
+                if (lazyImages.length === 0) {
+                  document.removeEventListener("scroll", lazyLoad);
+                  window.removeEventListener("resize", lazyLoad);
+                  window.removeEventListener("orientationchange", lazyLoad);
+                }
+              }
+            });
+
+            active = false;
+          }, 200);
+        }
+      };
+
+      document.addEventListener("scroll", lazyLoad);
+      window.addEventListener("resize", lazyLoad);
+      window.addEventListener("orientationchange", lazyLoad);
+    });
+  }
+};
+
+exports.default = LazyLoad;
+
+},{}],8:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -319,7 +372,7 @@ var SmoothToNextSection = {
 
 exports.default = SmoothToNextSection;
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -363,7 +416,7 @@ var SmoothTo = {
 
 exports.default = SmoothTo;
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
