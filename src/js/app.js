@@ -11,7 +11,9 @@ import SmoothTo from './modules/smoothTo';
 import SmoothToNextSection from './modules/scrollToNextSection';
 import Form from './modules/form';
 import TorchHover from './modules/torchHover';
+import LazyLoad from './modules/lazyLoad';
 
+LazyLoad.init();
 (($) => {
   // When DOM is ready
   $(() => {
