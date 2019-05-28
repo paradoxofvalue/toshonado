@@ -22,12 +22,18 @@
   &__torchOurFriends {
     width: 40%;
     position: relative;
-    background-image: url('/assets/images/torch-our-friends.gif');
+    background-image: url('/assets/images/torch-our-friends.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center bottom;
     @media screen and (max-width: 1024px) {
       display: none;
+    }
+    &.animation {
+      background-image: url('/assets/images/torch-our-friends.gif');
+    }
+    &.animation-finish {
+      background-image: url('/assets/images/torch-our-friends-last.png');
     }
   }
 

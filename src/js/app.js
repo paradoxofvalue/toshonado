@@ -10,6 +10,7 @@ import Carousels from './modules/carousels';
 import SmoothTo from './modules/smoothTo';
 import SmoothToNextSection from './modules/scrollToNextSection';
 import Form from './modules/form';
+import TorchHover from './modules/torchHover';
 
 (($) => {
   // When DOM is ready
@@ -21,5 +22,6 @@ import Form from './modules/form';
     SmoothTo.init();
     SmoothToNextSection.init();
     Form.init();
+    TorchHover.init();
   });
 })(jQuery);
