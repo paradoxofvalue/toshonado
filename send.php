@@ -9,19 +9,28 @@ if(isset($_POST) && isset($_POST['name']) && isset($_POST['phone'])) {
 }
 
 function sendEmail($name, $phone, $message) {
-  require 'PHPMailer-master/PHPMailerAutoload.php';
+  $body = 'Имя клиента: ' . $name . '.<br>' . 'Телефон клиента: ' . $phone . '.<br>' . 'Сообщение клиента:<br>' . $message;
+  if(mail('toshonado.kha@gmail.com', 'ToShoNado - заявка', $body)) {
+    echo json_encode(['status' => 'Error', 'message' => 'Message could not be sent']);
+  } else {
+    echo json_encode(['status' => 'Success', 'message' => 'Message has been sent']);
+  }
+  
+  return 0;
+
+  require './PHPMailer-master/PHPMailerAutoload.php';
 
   $mail = new PHPMailer;
   
-  //$mail->SMTPDebug = 3;                               // Enable verbose debug output
+  $mail->SMTPDebug = 3;                               // Enable verbose debug output
   
   $mail->isSMTP();                                      // Set mailer to use SMTP
   $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
   $mail->SMTPAuth = true;                               // Enable SMTP authentication
   $mail->Username = 'kallie.kolab.ceo@gmail.com';                 // SMTP username
   $mail->Password = 'nftnjotkccajgyfo';                           // SMTP password
-  $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-  $mail->Port = 587;                                    // TCP port to connect to
+  $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+  $mail->Port = 465;                                    // TCP port to connect to
   $mail->CharSet = 'UTF-8';
   $mail->setFrom('undefined@email.com', 'ToShoNado - website');
   // $mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
