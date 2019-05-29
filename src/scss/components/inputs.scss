@@ -72,7 +72,7 @@ form:invalid .material-button {
   height: $textarea-height + 60px; 
   width: calc(100% - 2px);
   label {
-    line-height: $font-size + 46px;
+    line-height: $font-size + 10px;
     height: $textarea-height + 30px;
   }
   textarea:invalid ~ #counter { 
