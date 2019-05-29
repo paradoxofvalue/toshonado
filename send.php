@@ -11,9 +11,9 @@ if(isset($_POST) && isset($_POST['name']) && isset($_POST['phone'])) {
 function sendEmail($name, $phone, $message) {
   $body = 'Имя клиента: ' . $name . '.<br>' . 'Телефон клиента: ' . $phone . '.<br>' . 'Сообщение клиента:<br>' . $message;
   if(mail('toshonado.kha@gmail.com', 'ToShoNado - заявка', $body)) {
-    echo json_encode(['status' => 'Error', 'message' => 'Message could not be sent']);
+    echo json_encode(['status' => 'Error', 'message' => 'Сообщение не отправлено. Попробуйте позже.']);
   } else {
-    echo json_encode(['status' => 'Success', 'message' => 'Message has been sent']);
+    echo json_encode(['status' => 'Success', 'message' => 'Сообщение успешно отправлено']);
   }
   
   return 0;
