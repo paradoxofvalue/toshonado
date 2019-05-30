@@ -79,7 +79,9 @@
     text-align: center;
     @media screen and (max-width: 1024px) {
       margin-bottom: 30px;
+      &.mb60 {
+        margin-bottom: 60px;
+      }
     }
   }
-
 }
